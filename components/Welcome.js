@@ -1,13 +1,13 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet} from 'react-native'
 
-const Welcome = ({navigation}) => {
+const Welcome = () => {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Welcome to the Tarot Dictionary</Text>
         <Button color="white"
           onPress={() => {
-            navigation.navigate('Index')
+            console.log('pressed')
           }}
           title="Start"
         />
@@ -16,16 +16,16 @@ const Welcome = ({navigation}) => {
 }
 
 const styles = StyleSheet.create({
-container: {
-    flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-},
-text: {
-    color: 'white',
-    fontSize: 30,
-},
+    container: {
+        flex: 1,
+        backgroundColor: 'black',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    text: {
+        color: 'white',
+        fontSize: 30,
+    },
 });
 
 export default Welcome
