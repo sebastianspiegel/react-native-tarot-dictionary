@@ -34,8 +34,11 @@ export default function App() {
     }
   ])
 
+  const showIndex = () => {
+    return <Index cards={cards}/>
+  }
+
   return (
-    // <Welcome />
-    <Index cards={cards}/>
+    <Welcome showIndex={showIndex}/>
   );
 }

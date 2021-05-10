@@ -1,13 +1,14 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet} from 'react-native'
 
-const Welcome = () => {
+const Welcome = (props) => {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Welcome to the Tarot Dictionary</Text>
         <Button color="white"
           onPress={() => {
-            console.log('pressed')
+            props.showIndex
+            console.log(props)
           }}
           title="Start"
         />
