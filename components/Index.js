@@ -1,14 +1,14 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet, FlatList} from 'react-native'
-import ListCard from './components/ListCard'
+import ListCard from './ListCard'
 
 const Index = (props) => {
     return(
         <View style={styles.container}>
             <FlatList 
                 data={props.cards}
-                renderItem={({card}) => (
-                    <ListCard />
+                renderItem={({item}) => (
+                    <ListCard card={item}/>
                 )}/>
         </View>
     )
