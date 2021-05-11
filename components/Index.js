@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text, View, Button, StyleSheet, FlatList} from 'react-native'
+import {Text, View, Button, StyleSheet, FlatList, TouchableOpacity} from 'react-native'
 import ListCard from './ListCard'
 
 const Index = React.memo(function Index({navigation, cards}) {

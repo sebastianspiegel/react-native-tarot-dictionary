@@ -1,10 +1,12 @@
 import React from 'react'
-import {Text, View, Button, StyleSheet, SafeAreaView} from 'react-native'
+import {Text, View, Button, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native'
 
 const ListCard = ({card}) => {
     return (
       <SafeAreaView style={styles.container}>
-          <Text style={styles.textTitle}>{card.title}</Text>
+          <TouchableOpacity onPress={console.log('pressed')}>
+              <Text style={styles.textTitle}>{card.title}</Text>
+          </TouchableOpacity>
           <Text style={styles.textDes}>{card.description}</Text>
       </SafeAreaView>
     );
