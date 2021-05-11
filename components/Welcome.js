@@ -7,8 +7,7 @@ const Welcome = (props) => {
         <Text style={styles.text}>Welcome to the Tarot Dictionary</Text>
         <Button color="white"
           onPress={() => {
-            props.showIndex
-            console.log(props)
+            props.navigation.navigate('Index')
           }}
           title="Start"
         />
