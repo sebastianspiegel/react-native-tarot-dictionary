@@ -10,28 +10,28 @@ export default function App() {
   const [cards, setcards] = useState([
     {
       id: 1,
-      title: "Page of Wands",
-      description: "Blah blah blah"
+      title: "Ace of Wands",
+      description: "Creation, invention, enterprise, the powers which result in these; principle, beginning, source; birth, family, origin, and in a sense the virility which is behind them; the starting point of enterprises; according to another account, money, fortune, inheritance."
     },
     {
       id: 2,
       title: "Two of Wands",
-      description: "Blah blah blah"
+      description: "Between the alternative readings there is no marriage possible; on the one hand, riches, fortune, magnificence; on the other, physical suffering, disease, chagrin, sadness, mortification. The design gives one suggestion; here is a lord overlooking his dominion and alternately contemplating a globe; it looks like the malady, the mortification, the sadness of Alexander amidst the grandeur of this world's wealth."
     },
     {
       id: 3,
       title: "Three of Wands",
-      description: "Blah blah blah"
+      description: "He symbolizes established strength, enterprise, effort, trade, commerce, discovery; those are his ships, bearing his merchandise, which are sailing over the sea. The card also signifies able co-operation in business, as if the successful merchant prince were looking from his side towards yours with a view to help you."
     },
     {
       id: 4,
       title: "Four of Wands",
-      description: "Blah blah blah"
+      description: "They are for once almost on the surface--country life, haven of refuge, a species of domestic harvest-home, repose, concord, harmony, prosperity, peace, and the perfected work of these."
     },
     {
       id: 5,
       title: "Five of Wands",
-      description: "Blah blah blah"
+      description: "Imitation, as, for example, sham fight, but also the strenuous competition and struggle of the search after riches and fortune. In this sense it connects with the battle of life. Hence some attributions say that it is a card of gold, gain, opulence."
     }
   ])
 
