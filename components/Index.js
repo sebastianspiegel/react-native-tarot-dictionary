@@ -2,7 +2,7 @@ import React from 'react'
 import {Text, View, Button, StyleSheet, FlatList} from 'react-native'
 import ListCard from './ListCard'
 
-const Index = (props) => {
+const Index = React.memo(function Index(props) {
     return(
         <View style={styles.container}>
             <FlatList 
@@ -12,7 +12,7 @@ const Index = (props) => {
                 )}/>
         </View>
     )
-}
+})
 
 const styles = StyleSheet.create({
     container: {

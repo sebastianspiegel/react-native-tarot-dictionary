@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import Welcome from './components/Welcome'
 import Index from './components/Index'
 import Header from './components/Header'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 export default function App() {
@@ -35,11 +37,18 @@ export default function App() {
     }
   ])
 
+  const Stack = createStackNavigator();
+
   return (
-    <View>
-      <Header />
-      <Welcome />
-    </View>
+    <NavigationContainer>
+      {/* <Header /> */}
+      <Stack.Navigator>
+        <Stack.Screen name="Welcome" component={Welcome}/>
+        <Stack.Screen name="Index">
+          {props => <Index {...props} cards={cards} />}
+        </Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
     
   );
 }
