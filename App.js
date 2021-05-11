@@ -41,11 +41,13 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      {/* <Header /> */}
       <Stack.Navigator>
         <Stack.Screen name="Welcome" component={Welcome}/>
         <Stack.Screen name="Index">
           {props => <Index {...props} cards={cards} />}
+        </Stack.Screen>
+        <Stack.Screen name="Show">
+          {props => <ShowCard {...props} card={card} />}
         </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
