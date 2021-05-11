@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Welcome from './components/Welcome'
 import Index from './components/Index'
-import Header from './components/Header'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
