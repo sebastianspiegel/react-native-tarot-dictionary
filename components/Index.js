@@ -8,7 +8,7 @@ const Index = React.memo(function Index(props) {
             <FlatList 
                 data={props.cards}
                 renderItem={({item}) => (
-                    <ListCard card={item}/>
+                    <ListCard card={item} keyExtractor={item => item.index_id.toString()}/>
                 )}/>
         </View>
     )
