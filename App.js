@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Welcome from './components/Welcome'
 import Index from './components/Index'
+import Header from './components/Header'
 
 
 export default function App() {
@@ -35,7 +36,10 @@ export default function App() {
   ])
 
   return (
-    <Welcome />
-    // <Index />
+    <View>
+      <Header />
+      <Welcome />
+    </View>
+    
   );
 }
