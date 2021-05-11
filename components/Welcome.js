@@ -1,13 +1,13 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet} from 'react-native'
 
-const Welcome = (props) => {
+const Welcome = ({navigation}) => {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Welcome to the Tarot Dictionary</Text>
         <Button color="white"
           onPress={() => {
-            props.navigation.navigate('Index')
+            navigation.navigate('Index')
           }}
           title="Start"
         />

@@ -1,11 +1,11 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet, SafeAreaView} from 'react-native'
 
-const ListCard = (props) => {
+const ListCard = ({card}) => {
     return (
       <SafeAreaView style={styles.container}>
-          <Text style={styles.textTitle}>{props.card.title}</Text>
-          <Text style={styles.textDes}>{props.card.description}</Text>
+          <Text style={styles.textTitle}>{card.title}</Text>
+          <Text style={styles.textDes}>{card.description}</Text>
       </SafeAreaView>
     );
 }

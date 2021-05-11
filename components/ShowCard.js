@@ -1,11 +1,11 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet} from 'react-native'
 
-const ShowCard = (props) => {
+const ShowCard = ({card}) => {
     return(
         <View style={styles.container}>
-            <Text style={styles.textTitle}>{props.card.title}</Text>
-            <Text style={styles.textDes}>{props.card.description}</Text>
+            <Text style={styles.textTitle}>{card.title}</Text>
+            <Text style={styles.textDes}>{card.description}</Text>
         </View>
     )
 }
