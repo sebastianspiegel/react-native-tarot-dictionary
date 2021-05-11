@@ -34,11 +34,8 @@ export default function App() {
     }
   ])
 
-  const showIndex = () => {
-    return <Index cards={cards}/>
-  }
-
   return (
-    <Welcome showIndex={showIndex}/>
+    <Welcome />
+    // <Index />
   );
 }
