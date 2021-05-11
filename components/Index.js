@@ -5,6 +5,7 @@ import ListCard from './ListCard'
 const Index = React.memo(function Index(props) {
     return(
         <View style={styles.container}>
+            <Button title="Go to Home" onPress={() => props.navigation.navigate('Welcome')} />
             <FlatList 
                 data={props.cards}
                 renderItem={({item}) => (
