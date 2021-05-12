@@ -9,8 +9,8 @@ const Index = React.memo(function Index({navigation, cards}) {
             <Button title="Go to Home" onPress={() => navigation.navigate('Welcome')} />
             <FlatList 
                 data={cards}
-                renderItem={({item}) => (
-                    <ListCard card={item} keyExtractor={item => item.index_id.toString()}/>
+                renderItem={({card}) => (
+                    <ListCard card={card} keyExtractor={card => card.index_id.toString()}/>
                 )}/>
         </View>
     )

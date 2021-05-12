@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet} from 'react-native'
 
-const ShowCard = ({cardId, route, navigation}) => {
+const ShowCard = ({route, navigation}) => {
 
     const { cardId } = route.params;
     
