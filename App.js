@@ -13,23 +13,18 @@ export default class App {
     
   // ])
 
-  // const getCards = () => {
-  //   fetch('https://rws-cards-api.herokuapp.com/api/v1/cards')
-  //   .then(resp => resp.json())
-  //   .then(json => setcards({
-  //     cards: json
-  //   }))
-  // }
+  state = {
+    cards: [],
+    loading: true
+  }
 
-  getCards() {
-    return fetch('https://rws-cards-api.herokuapp.com/api/v1/cards')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        return responseJson.cards;
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  getCards(){
+    fetch('https://rws-cards-api.herokuapp.com/api/v1/cards')
+    .then(resp => resp.json())
+    .then(json => this.setState({
+      cards: json.cards,
+      loading: false 
+    }))
   }
 
   // const Stack = createStackNavigator();
