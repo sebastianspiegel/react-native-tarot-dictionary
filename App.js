@@ -7,7 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-export default class App {
+export default class App extends React.Component {
 
   // const [cards, setcards] = useState([
     
@@ -25,6 +25,13 @@ export default class App {
       cards: json.cards,
       loading: false 
     }))
+    .then(() => {
+      console.log(this.state.loading)
+    })
+  }
+
+  componentDidMount(){
+    this.getCards()
   }
 
   // const Stack = createStackNavigator();
@@ -36,7 +43,7 @@ export default class App {
       <Stack.Navigator>
         <Stack.Screen name="Welcome" component={Welcome}/>
         <Stack.Screen name="Index">
-          {props => <Index {...props} cards={cards} />}
+          {props => <Index {...props} cards={this.state.cards} />}
         </Stack.Screen>
         <Stack.Screen name="ShowCard" component={ShowCard}/>
           {/* {props => <ShowCard {...props} card={card} />}
