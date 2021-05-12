@@ -7,11 +7,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-export default function App() {
+export default class App {
 
-  const [cards, setcards] = useState([
+  // const [cards, setcards] = useState([
     
-  ])
+  // ])
 
   // const getCards = () => {
   //   fetch('https://rws-cards-api.herokuapp.com/api/v1/cards')
@@ -21,7 +21,7 @@ export default function App() {
   //   }))
   // }
 
-  function getCards() {
+  getCards() {
     return fetch('https://rws-cards-api.herokuapp.com/api/v1/cards')
       .then((response) => response.json())
       .then((responseJson) => {
@@ -32,8 +32,10 @@ export default function App() {
       });
   }
 
-  const Stack = createStackNavigator();
+  // const Stack = createStackNavigator();
 
+  render(){
+    const Stack = createStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -47,5 +49,5 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
     
-  );
+  );}
 }
