@@ -5,12 +5,14 @@ const ListCard = React.memo(function ListCard({navigation, card}) {
 
     const handlePress = () => {
         console.log(card.title)
-        navigation.navigate('Welcome')
+        navigation.navigate('ShowCard', {
+            cardId: card.id
+        })
     }
 
     return (
       <SafeAreaView style={styles.container}>
-          <TouchableOpacity onPress={handlePress}>
+          <TouchableOpacity style={styles.card} onPress={handlePress}>
               <Text style={styles.textTitle}>{card.title}</Text>
           </TouchableOpacity>
           {/* <Text style={styles.textDes}>{card.description}</Text> */}
@@ -19,6 +21,9 @@ const ListCard = React.memo(function ListCard({navigation, card}) {
 })
 
 const styles = StyleSheet.create({
+    card: {
+        backgroundColor: 'grey',
+    },
     container: {
         flex: 2,
     },

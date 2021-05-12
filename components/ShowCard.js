@@ -1,7 +1,12 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet} from 'react-native'
 
-const ShowCard = ({card}) => {
+const ShowCard = ({cardId, route, navigation}) => {
+
+    const { cardId } = route.params;
+    
+    //fetch card and set in state
+
     return(
         <View style={styles.container}>
             <Text style={styles.textTitle}>{card.title}</Text>
