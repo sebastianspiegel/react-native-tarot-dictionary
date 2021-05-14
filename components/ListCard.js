@@ -1,18 +1,20 @@
 import React from 'react'
 import {Text, View, Button, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native'
 
-const ListCard = React.memo(function ListCard({navigation, card}) {
+const ListCard = React.memo(function ListCard({card}) {
 
-    const handlePress = () => {
-        console.log(card.title)
-        navigation.navigate('ShowCard', {
-            cardId: card.id
-        })
-    }
+    // const handlePress = () => {
+    //     console.log(card.title)
+    //     navigation.navigate('ShowCard', {
+    //         cardId: card.id
+    //     })
+    // }
 
     return (
       <SafeAreaView style={styles.container}>
-          <TouchableOpacity style={styles.card} onPress={handlePress}>
+          {console.log('card')}
+          <Text>Hello</Text>
+          <TouchableOpacity style={styles.card} onPress={console.log('pressed')}>
               <Text style={styles.textTitle}>{card.title}</Text>
           </TouchableOpacity>
           {/* <Text style={styles.textDes}>{card.description}</Text> */}

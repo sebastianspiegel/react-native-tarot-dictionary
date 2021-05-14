@@ -7,43 +7,40 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-export default class App extends React.Component {
+export default function App() {
 
-  // const [cards, setcards] = useState([
+  const [cards, setcards] = useState([
     
-  // ])
+  ])
 
-  state = {
-    cards: [],
-    loading: true
-  }
+  // state = {
+  //   cards: [],
+  //   loading: true
+  // }
 
-  getCards(){
+  const getCards = () => {
     fetch('https://rws-cards-api.herokuapp.com/api/v1/cards')
     .then(resp => resp.json())
-    .then(json => this.setState({
-      cards: json.cards,
-      loading: false 
+    .then(json => setcards({
+      cards: json.cards
     }))
-    .then(() => {
-      console.log(this.state.loading)
-    })
-  }
-
-  componentDidMount(){
-    this.getCards()
+    // .then(() => {
+    //   console.log(cards)
+    // })
   }
 
   // const Stack = createStackNavigator();
 
-  render(){
+  // render(){
     const Stack = createStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Welcome" component={Welcome}/>
+        <Stack.Screen name="Welcome" >
+          {props => <Welcome {...props} getCards={getCards} />}
+        </Stack.Screen>
         <Stack.Screen name="Index">
-          {props => <Index {...props} cards={this.state.cards} />}
+          {props => <Index {...props} cards={cards} />}
         </Stack.Screen>
         <Stack.Screen name="ShowCard" component={ShowCard}/>
           {/* {props => <ShowCard {...props} card={card} />}
@@ -51,5 +48,5 @@ export default class App extends React.Component {
       </Stack.Navigator>
     </NavigationContainer>
     
-  );}
+  );
 }
